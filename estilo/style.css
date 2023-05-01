@@ -56,7 +56,11 @@ header > p {
     text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.492);
 }
 
-iframe#rolagem::-webkit-scrollbar {
+header > div > iframe#rolagem {
+    width: 50%;
+}
+
+header > div > iframe::-webkit-scrollbar {
     width: 0px;
     height: 0px;
 }
