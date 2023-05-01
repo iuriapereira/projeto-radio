@@ -56,11 +56,9 @@ header > p {
     text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.492);
 }
 
-header > div > iframe {
-    border-top-width: 0px;
-    border-bottom-width: 0px;
-    border-left-width: 0px;
-    border-right-width: 0px;
+iframe#rolagem::-webkit-scrollbar {
+    width: 0px;
+    height: 0px;
 }
 
 nav {
