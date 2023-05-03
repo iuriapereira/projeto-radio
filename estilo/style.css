@@ -49,7 +49,7 @@ header > p { /* paragrafo do cabeçalho */
 }
 
 header > iframe { /* display de música da rádio */
-    width: 380px; /* tamanho de largura */
+    width: 340px; /* tamanho de largura */
     height: 43px; /* tamanho de altura */
     padding: 10px; 
 }
