@@ -65,6 +65,22 @@ header > div > iframe::-webkit-scrollbar {
     height: 0px;
 }
 
+span#burguer {
+    background-color: var(--cor04);
+    color: white;
+    display: block;
+    text-align: center;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.436);
+}
+
+span#burguer:hover {
+    background-color: var(--cor02);
+    color: var(--cor05);
+}
+
 nav {
     align-items: center;
     background-color: var(--cor04);

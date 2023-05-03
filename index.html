@@ -7,6 +7,7 @@
     <link rel="shortcut icon" href="img/icones/favicon-32x32.png" type="image/x-icon">
     <title>Rádio Cultura Tropical FM</title>
     <link rel="stylesheet" href="estilo/style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -20,7 +21,8 @@
             <iframe src="radio.html" frameborder="0" id="rolagem"></iframe>
         </div>
     </header>
-    <nav>
+    <span id="burguer" class="material-icons" onclick="clickMenu()">menu</span>
+    <nav id="itens">
         <a href="#">Home</a>
         <a href="#">Notícias</a>
         <a href="#">Contato</a>
@@ -55,5 +57,15 @@
             Site criado por <a href="https://github.com/iuriapereira" target="_blank">Iuri Pereira</a> para <a href="http://www.utfpr.edu.br/campus/santahelena" target="_blank">HTML UTFPR Campus Santa Helena</a>
         </p>
     </footer>
+
+    <script>
+        function clickMenu() {
+            if(itens.style.display == 'block') {
+                itens.style.display = 'none'
+            } else {
+                itens.style.display = 'block'
+            }
+        }
+    </script>
 </body>
 </html>                            
