@@ -1,0 +1,52 @@
+@charset "UTF-8";
+
+/* Todas as demais medias */
+
+/* Typical Device Breakpoints 
+--------------------------------
+Pequenas telas: até 600px
+Celular: 600px até 768px
+Tablet: 768x até 992px
+Desktop: 992px até 1200px
+Grandes telas: acima de 1200px
+*/
+
+:root {
+    --cor01: #D0D5ED;
+    --cor02: #6364B6;
+    --cor03: #010978;
+    --cor04: #010141;
+    --cor05: #E60807;
+
+    --fonte-padrao: 'Times New Roman', Times, serif;
+    --fonte-destaque: 'PT Serif', serif;
+}
+
+@media screen and (min-width: 768px) {
+    iframe {
+        width: 50vw;            
+        padding: 0px;
+        margin: 0px;
+    }
+
+    span#burguer {
+        display: none;
+    }
+
+    header > menu {
+        display: block;
+    }
+
+    menu > ul > li {
+        display: inline-block;
+        margin-right: 50px;
+    }
+
+    header > menu > ul > li > a { 
+        background-color: var(--cor04);
+    }
+
+    main {
+        width: 768px;
+    }
+}

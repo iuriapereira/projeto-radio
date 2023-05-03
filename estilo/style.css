@@ -2,7 +2,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&display=swap');
 
-:root {
+:root { /* decalrações globais */
     --cor01: #D0D5ED;
     --cor02: #6364B6;
     --cor03: #010978;
@@ -18,159 +18,160 @@
     padding: 0px;
 }
 
-body {
-    background-image: linear-gradient(to right, var(--cor02), var(--cor04));
-    /*background-color: var(--cor01);*/
-    font-family: var(---fonte-padrao);
+body, html { /* declaração para todo html e o body */
+    background-color: var(--cor01); /* cor de fundo */
+    font-family: var(---fonte-padrao); /* fonte do site */
 }
 
-a.externo::after {
-    content: '\00A0\1F517';
+header { /* cabeçalho */
+    background-image: linear-gradient(to bottom, var(--cor02), var(--cor04)); /* degrader do cabeçalho utilizando a paleta de cores */
+    text-align: left; /* alinha a esquerda */
+    padding-top: 10px; /* da padding no topo */
 }
 
-header {
-    /*background-image: linear-gradient(to bottom, var(--cor02), var(--cor04));*/
-    min-height: 150px;
-    text-align: left;
-    padding-top: 40px;
-}
-
-header > h1 {
-    color: white;
-    font-family: var(--fonte-destaque);
-    font-size: 3.0em;
-    font-weight: bold;
-    margin-bottom: 20px;
-    padding-left: 10px;
-    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.256)
-}
-
-header > p {
-    font-family: var(--fonte-padrao);
-    font-size: 1.2em;
-    color: white;
-    max-width: 600px;
-    padding-right: 10px;
-    padding-left: 10px;
-    padding-bottom: 10px;
-    text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.492);
-}
-
-header > div > iframe#rolagem {
-    width: 50%;
-}
-
-header > div > iframe::-webkit-scrollbar {
-    width: 0px;
-    height: 0px;
-}
-
-span#burguer {
-    background-color: var(--cor04);
-    color: white;
-    display: block;
-    text-align: center;
+header > h1 { /* titulo do cabeçalho */
+    color: white; /* cor da letra */
+    font-family: var(--fonte-destaque); /* tipo de fonte */
+    font-size: 3.0em; /* tamanho da fonte é 3 vezes a fonte padrão */
+    font-weight: bold; /* fonte fica mais negrito(forte) */
+    margin-bottom: 20px; /* margem em baixo do titulo */
     padding: 10px;
-    cursor: pointer;
-    border-radius: 10px;
-    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.436);
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.256) /* colocando sombra */
 }
 
-span#burguer:hover {
-    background-color: var(--cor02);
-    color: var(--cor05);
-}
-
-nav {
-    align-items: center;
-    background-color: var(--cor04);
+header > p { /* paragrafo do cabeçalho */
+    font-family: var(--fonte-padrao); /* tipo da fonte */
+    font-size: 1.2em; /* tamanho da fonte é 1,2 vezes a fonta padrão */
+    color: white; /* cor da letra */
     padding: 10px;
-    box-shadow: 0px 7px 7px rgba(0, 0, 0, 0.377);
+    text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.492); /* colocando sombra */
 }
 
-nav > a {
-    color: var(--cor02);
-    padding: 10px;
-    border-radius: 5px;
-    text-decoration: none;
-    font-weight: bolder;
-    transition-duration: .5s;
-    margin: auto;
+header > iframe { /* display de música da rádio */
+    width: 420px; /* tamanho de largura */
+    height: 50px; /* tamanho de altura */
+    padding: 10px; 
 }
 
-nav > a:hover {
-    background-color: var(--cor02);
-    color: var(--cor05);
+span#burguer { /* simbolo do menu */
+    background-color: var(--cor04); /* cor de fundo do botão menu */
+    color: white; /* cor do simbolo do menu */
+    display: block; /* fazendo com que o menu ocupe a tela */
+    text-align: center; /* alinhando o simbolo de menu no centro */
+    padding: 10px; /* espaçamento entre do botão de menu */
+    cursor: pointer; /* colocar como clicavel, a mão aparace */
+    border-top: 2px solid var(--cor02); /* largura, tipo e cor da borda */
+    border-radius: 10px; /* arredondando a borda */
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.436); /* colocando sombra */
 }
 
-main {
-    color: white;
-    min-width: 300px;
-    max-width: 1000px;
-    margin: auto;
-    margin-bottom: 10px;
-    padding: 20px;
-    text-align: justify;
-    text-indent: 30px;
+span#burguer:hover { /* quando passa o mouse em cima */
+    background-color: var(--cor02); /* cor de fundo do botão menu */
+    color: var(--cor05); /* cor da letra */
+    transition-duration: .5s; /* efeito de transição */
 }
 
-main > article > h3 {
-    padding-bottom: 10px;
+menu {
+    display: none; /* faz o menu sumir */
 }
 
-main > article > p {
-    padding-bottom: 10px;
+menu > ul {
+    list-style-type: none; /* tira os marcadores da lista */
 }
 
-aside {
-    background-color: var(--cor01);
-    padding: 10px;
-    border-radius: 10px;
-    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.296);
+menu > ul > li > a { /* link dentro da lista do menu */
+    display: block; /* faz aparecer os links */
+    padding: 10px; /* espaçamento */
+    margin-bottom: 3px; /* margem entre os links */
+    font-weight: bolder; /* deixando a letra mais forte */
+    text-decoration: none; /* tira o sublinhado do link */
+    text-align: center; /* alinha o texto no centro */
+    background-color: var(--cor03); /* cor de fundo */
+    color: white; /* cor da letra */
+    border-top: 2px solid var(--cor02); /* largura, tipo e cor da borda */
+    border-radius: 10px; /* arredondando a borda */
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.493); /* colocando sombra */
 }
 
-aside > h3 {
-    background-color: var(--cor04);
-    color: white;
-    padding: 10px;
-    margin: -10px -10px 0 -10px;
-    border-radius: 10px 10px 0px 0px;
+menu > ul > li > a:hover { /* quando passa o mouse em cima */
+    transition-duration: .5s; /* efeito de transição */
+    background-color: var(--cor02); /* cor de fundo do botão */
+    color: var(--cor05); /* cor da letra */
 }
 
-aside > ul {
-    list-style-type: '\2714\00A0\00A0';
-    list-style-position: inside;
-    color: var(--cor03);
+main { /* conteúdo principal */
+    width: 90vw; /* largura de 90% do display */
+    background-color: white; /* cor de fundo da caixa do conteúdo */
+    color: black; /* cor da letra do conteúdo */
+    margin: auto; /* todo o conteúdo no meio da tela */
+    margin-top: 10px; /* margem em cima da caixa do conteúdo */
+    margin-bottom: 10px; /* a margem em baixo do conteúdo */
+    padding: 10px; /* espaçamento para descolar da lateral da tela */
+    border-radius: 10px; /* arredondando a borda */
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.432); /* colocando sombra */
 }
 
-aside > ul > li > a {
-    color: var(--cor03);
-    font-weight: bolder;
-    text-decoration: none;
+article > h2 {
+    padding-bottom: 20px; /* espaçamento em baixo do h2 */
+    color: var(--cor04); /* cor da letra */
 }
 
-aside a:hover {
-    text-decoration: underline;
-    color: var(--cor05);
+article > p {
+    text-align: justify; /* alinhando o conteúdo, para que fique justificado */
+    text-indent: 30px; /* dando um espaçamento de paragráfo */
+    margin-bottom: 20px; /* descola mais um paragrafo do outro */
 }
 
-footer {
-    background-color: var(--cor04);
-    color: white;
-    text-align: center;
-    font-family: var(--fonte-destaque);
-    font-size: 0.8em;
-    padding: 5px;
-    box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.252);
+aside { /* caixa dentro do main */
+    background-color: var(--cor01); /* cor de fundo da caixa */
+    padding: 10px; /* espaçamento da caixa do aside com a lateral da caixa do conteudo e os paragrafos */
+    border-radius: 10px; /* arredondando a borda */
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.296); /* colocando sombra */
 }
 
-footer > p > a {
-    color: white;
-    font-weight: bolder;
-    text-decoration: none;
+aside > h3 { /* titulo do aside */
+    background-color: var(--cor04);  /* cor de fundo da caixa do titulo */
+    color: white; /* cor da letra */
+    padding: 10px; /* espaçamento do titulo */
+    margin: -10px -10px 0 -10px; /* margin negativa para que ele possa encostar na borda da caixa do aside */
+    border-radius: 10px 10px 0px 0px; /* arredondando a borda */
 }
 
-footer a:hover {
-    text-decoration: underline;
-    color: var(--cor05);
+aside > ul { /* lista dentro do aside */
+    list-style-type: '\2714\00A0\00A0'; /* simbolo de chack */
+    list-style-position: inside; /* trazendo a posição da lista mais para dentro da caixa */
+    color: var(--cor03); /* cor da letra */
 }
+
+aside > ul > li > a { /* links do aside */
+    color: var(--cor03); /* cor dos links */
+    font-weight: bolder; /* deixando mais forte a letra */
+    text-decoration: none; /* tirando o sublinhado */
+}
+
+aside a:hover { /* quando passar o mouse por cima do link */
+    text-decoration: underline; /* sublinha o link */
+    color: var(--cor05); /* muda de cor */
+}
+
+footer { /* rodapé */
+    background-color: var(--cor04); /* cor de fundo do rodapé */
+    color: white; /* cor da letra */
+    text-align: center; /* alinhando o texto no centro */
+    font-family: var(--fonte-destaque); /* tipo da fonte */
+    font-size: 0.8em; /* tamanho da fonte vezes em relação a fonte padrão */
+    padding: 5px; /* espaçamento do texto até a margem */
+    box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.252); /* colocando sombra */
+}
+
+footer > p > a { /* link do rodapé */
+    color: var(--cor01); /* cor da letra */
+    font-weight: bolder; /* deixando a fonte do link mais forte */
+    text-decoration: none; /* tirando o sublinhado do link */
+}
+
+footer a:hover { /* quando passar o mouse por cima do link */
+    text-decoration: underline; /* sublinha o link */
+    color: var(--cor05); /* muda a cor da letra */
+}
+

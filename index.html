@@ -7,9 +7,10 @@
     <link rel="shortcut icon" href="img/icones/favicon-32x32.png" type="image/x-icon">
     <title>Rádio Cultura Tropical FM</title>
     <link rel="stylesheet" href="estilo/style.css">
+    <link rel="stylesheet" href="estilo/media-query.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
-<body>
+<body onresize="mudouTamanho()">
     <header>
         <h1>
             Cultura Tropical FM  
@@ -17,20 +18,22 @@
         <p>
             A rádio que só toca sucesso.
         </p>
-        <div>
-            <iframe src="radio.html" frameborder="0" id="rolagem"></iframe>
-        </div>
-    </header>
-    <span id="burguer" class="material-icons" onclick="clickMenu()">menu</span>
-    <nav id="itens">
-        <a href="#">Home</a>
-        <a href="#">Notícias</a>
-        <a href="#">Contato</a>
-    </nav>
 
+        <iframe src="https://player.streaminghd.net.br/luna-small/7096" frameborder="0" scrolling="no"></iframe>
+    
+        <span id="burguer" class="material-icons" onclick="clickMenu()">menu</span>
+        <menu id="itens">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Notícias</a></li>
+                <li><a href="#">Contato</a></li>
+            </ul>
+        </menu>
+    </header>
+    
     <main>
         <article>
-            <h1>Ibitira Bahia</h1>
+            <h2>Ibitira Bahia</h2>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint quos atque tempora excepturi explicabo ab dolorem sunt ad ipsum, tenetur distinctio, non rerum error autem aperiam suscipit labore, voluptatem ipsam.</p>
             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corrupti soluta iusto dicta animi vel quia, dignissimos velit, consequatur eos, eius maiores nesciunt necessitatibus! Odio placeat natus mollitia quaerat eius non.</p>
         </article>
@@ -59,8 +62,15 @@
     </footer>
 
     <script>
+        function mudouTamanho() {
+            if (window.innerWidth >= 768){
+                itens.style.display = 'block'
+            } else {
+                itens.style.display = 'none'
+            }
+        }
         function clickMenu() {
-            if(itens.style.display == 'block') {
+            if (itens.style.display == 'block') {
                 itens.style.display = 'none'
             } else {
                 itens.style.display = 'block'
