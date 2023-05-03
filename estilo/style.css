@@ -27,6 +27,7 @@ header { /* cabeçalho */
     background-image: linear-gradient(to bottom, var(--cor02), var(--cor04)); /* degrader do cabeçalho utilizando a paleta de cores */
     text-align: left; /* alinha a esquerda */
     padding-top: 10px; /* da padding no topo */
+    padding: 10px;
 }
 
 header > h1 { /* titulo do cabeçalho */
