@@ -123,6 +123,10 @@ article > p {
     margin-bottom: 20px; /* descola mais um paragrafo do outro */
 }
 
+article > img {
+    display: block;
+}
+
 aside { /* caixa dentro do main */
     background-color: var(--cor01); /* cor de fundo da caixa */
     padding: 10px; /* espaçamento da caixa do aside com a lateral da caixa do conteudo e os paragrafos */
