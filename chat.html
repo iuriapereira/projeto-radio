@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Rádio Cultura Tropical FM</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="estilo/style.css">
+</head>
+
+<body>
+  <header class="bg-light">
+    <div class="container py-4">
+      <h1 class="display-4">Cultura Tropical FM</h1>
+      <p class="lead">A rádio que só toca sucesso.</p>
+      <iframe src="https://player.streaminghd.net.br/luna-small/7096" frameborder="0" scrolling="no" height="43"></iframe>
+    </div>
+    <span id="burguer" class="material-icons" onclick="clickMenu()">menu</span>
+    <menu id="itens">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="noticias.html" target="_blank">Notícias</a></li>
+            <li><a href="#">Contato</a></li>
+        </ul>
+    </menu>
+  </header>
+
+  <main>
+    <div class="container py-4">
+      <div class="row">
+        <div class="col-lg-8">
+          <article>
+            <h2>Ibitira Bahia</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla malesuada, nunc a ullamcorper vehicula,
+              massa lorem euismod magna, ac dapibus quam est vitae lorem. Fusce accumsan lacus et mi finibus, in
+              eleifend eros varius. In sollicitudin condimentum viverra. Nulla facilisi.</p>
+            <img src="caminho_da_imagem.jpg" alt="Imagem do artigo" class="img-fluid">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla malesuada, nunc a ullamcorper vehicula,
+              massa lorem euismod magna, ac dapibus quam est vitae lorem. Fusce accumsan lacus et mi finibus, in
+              eleifend eros varius. In sollicitudin condimentum viverra. Nulla facilisi.</p>
+          </article>
+        </div>
+        <div class="col-lg-4">
+          <aside>
+            <h3>Nos acompanhe pelas redes sociais ou APP:</h3>
+            <ul>
+                <li>
+                    <img src="img/icones/icone-github.png" alt="Logo GitHub"><a href="https://github.com/iuriapereira" target="_blank" rel="external">/iuriapereira</a> - Veja lá os meus projetos no GitHub
+                </li>
+                
+                <li>
+                    <img src="img/icones/icone-instagram.png" alt="Logo Instagram"><a href="https://instagram.com/radio.ibi.fm?igshid=YmMyMTA2M2Y=" target="_blank" rel="external">/radio.ibi.fm</a> - Nos siga no Instagram e curta nossas postagens
+                </li>
+                <li>
+                    <img src="img/icones/icone-playstore.png" alt=""><a href="https://play.google.com/store/apps/details?id=com.streaminghd.culturatropical" target="_blank">PlayStore</a> - Baixe nosso aplicativo e escute pelo seu smartphone
+                </li>
+            </ul>
+          </aside>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="bg-dark text-white">
+    <div class="container py-3">
+      <p>&copy; 2023 Meu Projeto. Todos os direitos reservados.</p>
+      <p>Desenvolvido por <a href="https://github.com/iuriapereira" target="_blank">Iuri Pereira</a></p>
+    </div>
+  </footer>
+
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/js/bootstrap.min.js">
+    function mudouTamanho() {
+        if (window.innerWidth >= 768){
+            itens.style.display = 'block'
+        } else {
+            itens.style.display = 'none'
+        }
+    }
+    function clickMenu() {
+        if (itens.style.display == 'block') {
+            itens.style.display = 'none'
+        } else {
+            itens.style.display = 'block'
+        }
+    }
+  </script>
+</body>
+
+</html>
