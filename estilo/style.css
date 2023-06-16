@@ -30,28 +30,18 @@ header { /* cabeçalho */
     padding: 10px;
 }
 
-header > h1 { /* titulo do cabeçalho */
+header > div > h1.display-4 { /* titulo do cabeçalho */
     color: white; /* cor da letra */
     font-family: var(--fonte-destaque); /* tipo de fonte */
-    font-size: 3.0em; /* tamanho da fonte é 3 vezes a fonte padrão */
-    font-weight: bold; /* fonte fica mais negrito(forte) */
-    margin-bottom: 20px; /* margem em baixo do titulo */
-    padding: 10px;
+    font-weight: bolder; /* fonte fica mais negrito(forte) */
     text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.256) /* colocando sombra */
 }
 
-header > p { /* paragrafo do cabeçalho */
+header > div > p.lead { /* paragrafo do cabeçalho */
     font-family: var(--fonte-padrao); /* tipo da fonte */
-    font-size: 1.2em; /* tamanho da fonte é 1,2 vezes a fonta padrão */
     color: white; /* cor da letra */
     padding: 10px;
     text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.492); /* colocando sombra */
-}
-
-header > iframe { /* display de música da rádio */
-    width: 300px; /* tamanho de largura */
-    height: 43px; /* tamanho de altura */
-    padding: 10px; 
 }
 
 span#burguer { /* simbolo do menu */
@@ -78,11 +68,14 @@ menu {
 
 menu > ul {
     list-style-type: none; /* tira os marcadores da lista */
+    padding: 0px;
+    margin-top: 20px;
+    margin-bottom: 0px;
 }
 
 menu > ul > li > a { /* link dentro da lista do menu */
     display: block; /* faz aparecer os links */
-    padding: 10px; /* espaçamento */
+    padding: 10px 30px 10px 30px; /* espaçamento */
     margin-bottom: 3px; /* margem entre os links */
     font-weight: bolder; /* deixando a letra mais forte */
     text-decoration: none; /* tira o sublinhado do link */
@@ -134,9 +127,14 @@ aside { /* caixa dentro do main */
     box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.296); /* colocando sombra */
 }
 
+aside.contato {
+    margin-top: 60px;
+}
+
 aside > h3 { /* titulo do aside */
     background-color: var(--cor04);  /* cor de fundo da caixa do titulo */
     color: white; /* cor da letra */
+    font-size: 1.3em;
     padding: 10px; /* espaçamento do titulo */
     margin: -10px -10px 0 -10px; /* margin negativa para que ele possa encostar na borda da caixa do aside */
     border-radius: 10px 10px 0px 0px; /* arredondando a borda */
@@ -169,9 +167,10 @@ footer { /* rodapé */
     box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.252); /* colocando sombra */
 }
 
-footer > p > a { /* link do rodapé */
+footer > div > p > a { /* link do rodapé */
     color: var(--cor01); /* cor da letra */
     font-weight: bolder; /* deixando a fonte do link mais forte */
+    color: var(--cor02);
     text-decoration: none; /* tirando o sublinhado do link */
 }
 

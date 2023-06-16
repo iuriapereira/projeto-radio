@@ -1,42 +1,153 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="img/icones/favicon-32x32.png" type="image/x-icon">
+    <link rel="shortcut icon" href="img/icones/favicon.ico" type="image/x-icon">
     <title>Notícias</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
     <link rel="stylesheet" href="estilo/style.css">
-    <link rel="stylesheet" href="estilo/media-query.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <style>
-        header > p {
-            font-size: 1.5em;
+        @media (min-width: 768px) {
+            span#burguer {
+                display: none;
+            }
+
+            #itens {
+                display: block;
+            }
+
+            header>menu {
+                display: block;
+            }
+
+            menu>ul>li {
+                display: inline-block;
+                margin-right: 10px;
+            }
+
+            header>menu>ul>li>a {
+                background-color: var(--cor04);
+            }
         }
     </style>
 </head>
-<body>
-    <header>
-        <h1>
-            Cultura Tropical FM  
-        </h1>
-        <p>
-            Noticias da região e do mundo
-        </p>
+
+<body onresize="mudouTamanho()">
+    <header class="bg-light">
+        <div class="container py-4">
+            <h1 class="display-4">
+                Cultura Tropical FM
+            </h1>
+            <p class="lead">
+                Notícias da região e do mundo
+            </p>
+            <span id="burguer" class="material-icons" onclick="clickMenu()">menu</span>
+            <menu id="itens">
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="noticias.html">Notícias</a></li>
+                </ul>
+            </menu>
+        </div>
     </header>
-    
+
     <main>
-        <article>
-            <h2>Ibitira Bahia</h2>
-            <p>Está entre os maiores São João da Região aqui no distrito de Ibitira Bahia, com uma tradição cultura que existe a muitos anos. O filhos que residem fora, sempre buscam reecontrar a família e amigos nessa época, para que juntos possam festejar e matar a saudade desta terra querida que é a nossa Ibitira. Pessoas de cidades circo vizinhas particpam com grande fevor todos os anos, abrilhantando ainda mais a história que a região carrega durante muitos anos.</p>
-            <p>Um fervor passado de geração em geração, com apresentações e quadrilhas juninas das escolas situadas no distrito, onde shows com os filhos da própria terra se apresentam e trazem alegria e mais dias de festa para a população que ali residem.</p>
-            <img src="img/quadrilhas.png" alt="diasdasquadrilhasjuninas">
-        </article>
+        <div class="container py-4">
+            <div class="row">
+                <div class="col-lg-8">
+                    <article>
+                        <h2>Ibitira Bahia</h2>
+                        <p>Está entre os maiores São João da Região aqui no distrito de Ibitira Bahia, com uma tradição
+                            cultura que existe a muitos anos. O filhos que residem fora, sempre buscam reecontrar a
+                            família e amigos nessa época, para que juntos possam festejar e matar a saudade desta terra
+                            querida que é a nossa Ibitira. Pessoas de cidades circo vizinhas particpam com grande fevor
+                            todos os anos, abrilhantando ainda mais a história que a região carrega durante muitos anos.
+                        </p>
+                        <p>Um fervor passado de geração em geração, com apresentações e quadrilhas juninas das escolas
+                            situadas no distrito, onde shows com os filhos da própria terra se apresentam e trazem
+                            alegria e mais dias de festa para a população que ali residem.</p>
+                        <img src="img/quadrilhas.png" alt="diasdasquadrilhasjuninas" class="img-fluid">
+                    </article>
+                </div>
+                <div class="col-lg-4">
+                    <aside>
+                        <h3>Nos acompanhe pelas redes sociais ou APP:</h3>
+                        <ul>
+                            <li>
+                                <img src="img/icones/icone-github.png" alt="Logo GitHub"><a
+                                    href="https://github.com/iuriapereira" target="_blank"
+                                    rel="external">/iuriapereira</a> - Veja lá os meus projetos no GitHub
+                            </li>
+
+                            <li>
+                                <img src="img/icones/icone-instagram.png" alt="Logo Instagram"><a
+                                    href="https://instagram.com/radio.ibi.fm?igshid=YmMyMTA2M2Y=" target="_blank"
+                                    rel="external">/radio.ibi.fm</a> - Nos siga no Instagram e curta nossas postagens
+                            </li>
+                            <li>
+                                <img src="img/icones/icone-playstore.png" alt="Logo PlayStore"><a
+                                    href="https://play.google.com/store/apps/details?id=com.streaminghd.culturatropical"
+                                    target="_blank">PlayStore</a> - Baixe nosso aplicativo e escute pelo seu smartphone
+                            </li>
+                        </ul>
+                    </aside>
+                    <aside class="contato">
+                        <h3>Entre em contato:</h3>
+                        <ul>
+                            <li>
+                                <img src="img/icones/icone-email.png" alt="Logo Email"><a
+                                    href="mailto:kau_mi@hotmail.com" rel="external">/kau_mi@hotamil.com</a> - Email para
+                                contato
+                            </li>
+
+                            <li>
+                                <img src="img/icones/icone-whatsapp.png" alt="Logo WhatsApp"><a href="tel:77988464660"
+                                    target="_blank" rel="external">/(77) 98846-4660</a> - Entre em contato pelo WhatsApp
+                                ou Ligue
+                            </li>
+                        </ul>
+                    </aside>
+                </div>
+            </div>
+        </div>
     </main>
-    <footer>
-        <p>
-            Site criado por <a href="https://github.com/iuriapereira" target="_blank">Iuri Pereira</a> para <a href="http://www.utfpr.edu.br/campus/santahelena" target="_blank">HTML UTFPR Campus Santa Helena</a>
-        </p>
+
+    <footer class="bg-dark text-white">
+        <div class="container py-3">
+            <p>&copy; 2023 Cultura Tropical FM. Todos os direitos reservados.</p>
+            <p>Desenvolvido por <a href="https://github.com/iuriapereira" target="_blank">Iuri Pereira</a></p>
+        </div>
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+        crossorigin="anonymous"></script>
+    <script>
+        function mudouTamanho() {
+            var burguer = document.getElementById('burguer');
+            var itens = document.getElementById('itens');
+            if (window.innerWidth >= 768) {
+                burguer.style.display = 'none';
+                itens.style.display = 'block';
+            } else {
+                burguer.style.display = 'block';
+                itens.style.display = 'none';
+            }
+        }
+        function clickMenu() {
+            var itens = document.getElementById('itens');
+            if (itens.style.display == 'block') {
+                itens.style.display = 'none';
+            } else {
+                itens.style.display = 'block';
+            }
+        }
+    </script>
 </body>
+
 </html>
