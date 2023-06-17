@@ -23,30 +23,24 @@ Grandes telas: acima de 1200px
 }
 
 @media screen and (min-width: 768px) {
-    iframe {
-        width: 50vw;            
-        padding: 0px;
-        margin: 0px;
-    }
-
     span#burguer {
         display: none;
     }
 
-    header > menu {
+    #itens {
         display: block;
     }
 
-    menu > ul > li {
+    header>menu {
+        display: block;
+    }
+
+    menu>ul>li {
         display: inline-block;
-        margin-right: 20px;
+        margin-right: 10px;
     }
 
-    header > menu > ul > li > a { 
+    header>menu>ul>li>a {
         background-color: var(--cor04);
-    }
-
-    main {
-        width: 768px;
     }
 }
